@@ -20,6 +20,7 @@ const translations = {
       testimonials: "آراء عملائنا",
       contact: "اتصل بنا",
       bookNowBtn: "احجز الآن ✦",
+      installApp: "تثبيت التطبيق 📲",
       callUs: "اتصل الآن"
     },
     hero: {
@@ -191,6 +192,7 @@ const translations = {
       testimonials: "Reviews",
       contact: "Contact",
       bookNowBtn: "Book Now ✦",
+      installApp: "Install App 📲",
       callUs: "Call Now"
     },
     hero: {

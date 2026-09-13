@@ -34,6 +34,7 @@
     setupForms();
     setupScrollAnimations();
     setupQuickBookingSync();
+    setupPWAInstall();
   }
 
   /**
@@ -428,6 +429,85 @@
 
     document.querySelectorAll('.fade-in-section').forEach(el => {
       observer.observe(el);
+    });
+  }
+
+  /**
+   * PWA Service Worker & Install Prompt Setup
+   */
+  function setupPWAInstall() {
+    // 1. Register Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then((reg) => {
+            console.log('[ALLORD CAR PWA] Service Worker registered successfully:', reg.scope);
+          })
+          .catch((err) => {
+            console.warn('[ALLORD CAR PWA] Service Worker registration failed:', err);
+          });
+      });
+    }
+
+    // 2. Handle beforeinstallprompt Event
+    let deferredPrompt = null;
+    const desktopInstallBtn = document.getElementById('installAppBtn');
+    const mobileInstallBtn = document.getElementById('mobileInstallAppBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent browser default mini-infobar
+      e.preventDefault();
+      deferredPrompt = e;
+
+      // Make install buttons prominent
+      if (desktopInstallBtn) desktopInstallBtn.classList.remove('hidden');
+      if (mobileInstallBtn) mobileInstallBtn.classList.remove('hidden');
+    });
+
+    function triggerInstall() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            showToast(currentLang === 'ar' ? 'شكراً لتثبيت تطبيق ALLORD CAR! 👑' : 'Thank you for installing ALLORD CAR! 👑', 'success');
+          }
+          deferredPrompt = null;
+        });
+      } else {
+        // Fallback for iOS or already installed
+        const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        if (isIos) {
+          showToast(
+            currentLang === 'ar' 
+              ? 'لتثبيت التطبيق على آيفون: اضغط زر المشاركة (Share) في الأسفل ثم اختر "إضافة إلى الشاشة الرئيسية" 📲' 
+              : 'On iPhone: Tap the Share button at bottom and select "Add to Home Screen" 📲',
+            'info'
+          );
+        } else {
+          showToast(
+            currentLang === 'ar' 
+              ? 'تطبيق ALLORD CAR مثبت أو جاهز للاستخدام مباشرة من شاشتك الرئيسية 📲' 
+              : 'ALLORD CAR App is installed or ready from your home screen 📲',
+            'info'
+          );
+        }
+      }
+    }
+
+    if (desktopInstallBtn) {
+      desktopInstallBtn.addEventListener('click', triggerInstall);
+    }
+    if (mobileInstallBtn) {
+      mobileInstallBtn.addEventListener('click', () => {
+        closeMobileDrawer();
+        triggerInstall();
+      });
+    }
+
+    window.addEventListener('appinstalled', () => {
+      console.log('[ALLORD CAR PWA] App was installed successfully');
+      if (desktopInstallBtn) desktopInstallBtn.classList.add('hidden');
+      if (mobileInstallBtn) mobileInstallBtn.classList.add('hidden');
     });
   }
 

@@ -1,0 +1,50 @@
+{
+  "name": "ALLORD CAR - ليموزين الفخامة",
+  "short_name": "ALLORD CAR",
+  "description": "خدمة الليموزين والنقل السياحي الفاخر في مصر | Premier Luxury Transport & Limousine Service",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "dir": "rtl",
+  "lang": "ar",
+  "categories": ["travel", "transportation", "lifestyle"],
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/icons/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "احجز الآن عبر واتساب",
+      "short_name": "حجز سريع",
+      "description": "حجز ليموزين فوري عبر واتساب",
+      "url": "./index.html#booking",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "أسطول السيارات الفاخرة",
+      "short_name": "الأسطول",
+      "description": "استعراض سيارات مرسيدس ورولز رويس وإسكاليد",
+      "url": "./index.html#fleet",
+      "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

@@ -30,6 +30,22 @@ A modern, responsive, and luxury limousine and chauffeur booking web platform de
 
 ---
 
+## 📱 Mobile App (PWA & Android APK)
+
+ALLORD CAR is fully configured as an installable mobile application:
+
+1. **Installable PWA (Progressive Web App):**
+   - **Android / Chrome / Edge:** Click the **"تثبيت التطبيق 📲 / Install App"** button in the navbar or tap the 3-dot menu and select **"Install App"**. It installs with an app icon on your home screen and launches in full-screen standalone mode without browser URL bars.
+   - **iPhone / iPad (iOS Safari):** Tap the **Share** button at the bottom of Safari, scroll down, and tap **"Add to Home Screen"** (إضافة إلى الشاشة الرئيسية).
+   - **Offline Mode:** Powered by a Service Worker (`sw.js`) caching assets for lightning-fast launch times.
+
+2. **Automated Android APK Cloud Builder (GitHub Actions):**
+   - Every push to this repository triggers `.github/workflows/build-apk.yml`.
+   - The workflow compiles a native Android debug APK (`ALLORD-CAR.apk`) on GitHub's cloud runners.
+   - Download the APK anytime from the **Actions** tab on GitHub under **Artifacts**!
+
+---
+
 ## 🚀 Live Preview & Local Run
 
 Simply open `index.html` in any modern web browser or run a local HTTP server:

@@ -22,7 +22,14 @@
   <!-- Custom Luxury Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Favicon / Apple Touch Icon -->
+  <!-- Favicon / Apple Touch Icon & PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#080808" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="ALLORD CAR" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/icons/favicon-64.png" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
 </head>
 <body class="bg-[#080808] text-[#EAEAEA] antialiased selection:bg-[#D4AF37] selection:text-black">
@@ -82,6 +89,17 @@
           <span id="langLabel">English</span>
         </button>
 
+        <!-- Install PWA App Button -->
+        <button 
+          id="installAppBtn" 
+          type="button" 
+          class="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D4AF37]/40 bg-gradient-to-r from-[#D4AF37]/15 to-transparent text-xs font-semibold text-[#D4AF37] hover:border-[#FFD700] hover:scale-105 transition-all"
+          title="Install ALLORD CAR Mobile App"
+        >
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <span data-i18n="nav.installApp">تثبيت التطبيق 📲</span>
+        </button>
+
         <!-- Direct WhatsApp Call/CTA -->
         <a href="#booking" class="btn-gold text-xs py-2 px-4 md:text-sm md:py-2.5 md:px-5">
           <i class="fa-solid fa-crown text-xs"></i>
@@ -134,6 +152,11 @@
     </div>
 
     <div class="space-y-4 pt-6 border-t border-white/10">
+      <button id="mobileInstallAppBtn" class="w-full btn-gold-outline text-xs py-2.5 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-mobile-screen-button text-sm"></i>
+        <span data-i18n="nav.installApp">تثبيت التطبيق 📲</span>
+      </button>
+
       <button id="mobileLangToggleBtn" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg border border-[#D4AF37]/40 text-sm font-semibold text-[#EAEAEA]">
         <i class="fa-solid fa-globe text-[#D4AF37]"></i>
         <span>English / العربية</span>

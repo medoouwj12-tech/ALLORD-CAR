@@ -1,0 +1,21 @@
+{
+  "name": "allord-car",
+  "version": "1.0.0",
+  "description": "ALLORD CAR - Luxury Limousine Booking Mobile & Web Application",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "cap:add": "npx cap add android",
+    "cap:sync": "npx cap sync android",
+    "cap:open": "npx cap open android",
+    "build:apk": "npx cap sync && cd android && ./gradlew assembleDebug"
+  },
+  "keywords": ["limousine", "car-rental", "egypt", "luxury", "booking", "whatsapp", "pwa", "android", "capacitor"],
+  "author": "ALLORD CAR",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  }
+}
