@@ -1,0 +1,458 @@
+/* ==========================================================================
+   ALLORD CAR - Luxury Limousine Booking Experience
+   Custom Stylesheet: Obsidian Dark & Metallic Gold Luxury Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cinzel:wght@400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+:root {
+  /* Core Color Palette */
+  --bg-obsidian: #080808;
+  --bg-dark: #0D0D0D;
+  --bg-card: #141414;
+  --bg-card-hover: #1A1A1A;
+  --bg-glass: rgba(18, 18, 18, 0.75);
+  --bg-glass-strong: rgba(13, 13, 13, 0.88);
+  
+  /* Metallic Gold Palette */
+  --gold-primary: #D4AF37;
+  --gold-light: #F7E07E;
+  --gold-bright: #FFD700;
+  --gold-dark: #997819;
+  --gold-metallic: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(255, 215, 0, 0.05) 100%);
+  --gold-border: rgba(212, 175, 55, 0.22);
+  --gold-border-bright: rgba(212, 175, 55, 0.65);
+  --gold-glow: 0 0 25px rgba(212, 175, 55, 0.28);
+  --gold-glow-strong: 0 0 35px rgba(212, 175, 55, 0.5);
+
+  /* Typography Colors */
+  --text-pure: #FFFFFF;
+  --text-platinum: #EAEAEA;
+  --text-silver: #B0B0B0;
+  --text-muted: #737373;
+
+  /* Typography Families */
+  --font-en-heading: 'Cinzel', serif;
+  --font-en-body: 'Outfit', sans-serif;
+  --font-ar-heading: 'Cairo', sans-serif;
+  --font-ar-body: 'Tajawal', sans-serif;
+}
+
+/* Base Document Setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--text-platinum);
+  font-family: var(--font-ar-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(212, 175, 55, 0.04) 0%, transparent 45%);
+  background-attachment: fixed;
+}
+
+/* LTR / EN Setup */
+html[lang="en"] body {
+  font-family: var(--font-en-body);
+}
+
+html[lang="en"] .font-heading {
+  font-family: var(--font-en-heading);
+}
+
+/* RTL / AR Setup */
+html[lang="ar"] body {
+  font-family: var(--font-ar-body);
+}
+
+html[lang="ar"] .font-heading {
+  font-family: var(--font-ar-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2a2618;
+  border-radius: 4px;
+  border: 1px solid var(--gold-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* ==========================================================================
+   Typography & Metallic Text Styling
+   ========================================================================== */
+
+.text-gold-gradient {
+  background: var(--gold-metallic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-glow {
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+/* ==========================================================================
+   Luxury Glassmorphism & Cards
+   ========================================================================== */
+
+.luxury-glass {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--gold-border);
+}
+
+.luxury-glass-strong {
+  background: var(--bg-glass-strong);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--gold-border);
+}
+
+.luxury-card {
+  background: var(--bg-card);
+  border: 1px solid var(--gold-border);
+  border-radius: 1rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.08), transparent);
+  transition: 0.6s ease;
+  pointer-events: none;
+}
+
+.luxury-card:hover::before {
+  left: 100%;
+}
+
+.luxury-card:hover {
+  border-color: var(--gold-border-bright);
+  box-shadow: var(--gold-glow);
+  transform: translateY(-4px);
+  background: var(--bg-card-hover);
+}
+
+/* ==========================================================================
+   Luxury Buttons & CTAs
+   ========================================================================== */
+
+.btn-gold {
+  background: var(--gold-metallic);
+  color: #0d0d0d;
+  font-weight: 700;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  box-shadow: 0 4px 18px rgba(212, 175, 55, 0.25);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  box-shadow: var(--gold-glow-strong);
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08);
+}
+
+.btn-gold:active {
+  transform: translateY(0) scale(0.99);
+}
+
+.btn-gold-outline {
+  background: transparent;
+  color: var(--gold-primary);
+  border: 1.5px solid var(--gold-primary);
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-bright);
+  color: var(--gold-bright);
+  box-shadow: var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Hero Styling & Silhouettes
+   ========================================================================== */
+
+.hero-gradient-overlay {
+  background: radial-gradient(circle at center, rgba(13, 13, 13, 0.5) 0%, rgba(8, 8, 8, 0.95) 85%);
+}
+
+.hero-luxury-mesh {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(at 20% 30%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+    radial-gradient(at 80% 70%, rgba(180, 135, 30, 0.08) 0px, transparent 50%);
+  pointer-events: none;
+}
+
+/* Gold separator line */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold-primary) 50%, transparent 100%);
+  opacity: 0.5;
+  width: 100%;
+}
+
+.gold-accent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.35rem 1rem;
+  border-radius: 9999px;
+  color: var(--gold-light);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   Floating WhatsApp Button
+   ========================================================================== */
+
+.floating-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  inset-inline-end: 2rem;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  text-decoration: none;
+  animation: pulse-gold-halo 3s infinite;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1) rotate(6deg);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.6), 0 0 25px rgba(212, 175, 55, 0.8);
+}
+
+@keyframes pulse-gold-halo {
+  0% {
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(212, 175, 55, 0.7);
+  }
+  70% {
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4), 0 0 0 18px rgba(212, 175, 55, 0);
+  }
+  100% {
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4), 0 0 0 0 rgba(212, 175, 55, 0);
+  }
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  inset-inline-end: 76px;
+  background: var(--bg-card);
+  color: var(--text-pure);
+  border: 1px solid var(--gold-border);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateX(10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.floating-whatsapp:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   Interactive Forms & Inputs
+   ========================================================================== */
+
+.luxury-input {
+  width: 100%;
+  background: rgba(14, 14, 14, 0.8);
+  border: 1.5px solid rgba(212, 175, 55, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  color: var(--text-pure);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+}
+
+.luxury-input:focus {
+  border-color: var(--gold-primary);
+  background: rgba(22, 22, 22, 0.95);
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.22);
+}
+
+.luxury-input::placeholder {
+  color: #666666;
+}
+
+.luxury-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23D4AF37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: left 1rem center;
+  background-size: 1.1em;
+  padding-left: 2.8rem;
+}
+
+html[lang="ar"] .luxury-select {
+  background-position: left 1rem center;
+}
+
+html[lang="en"] .luxury-select {
+  background-position: right 1rem center;
+  padding-left: 1.15rem;
+  padding-right: 2.8rem;
+}
+
+/* ==========================================================================
+   Animations & Reveals
+   ========================================================================== */
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes goldShine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-gold-shine {
+  background-size: 200% auto;
+  animation: goldShine 6s linear infinite;
+}
+
+/* ==========================================================================
+   Fleet Filter Buttons
+   ========================================================================== */
+
+.fleet-tab-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  color: var(--text-silver);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.fleet-tab-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.fleet-tab-btn.active {
+  background: var(--gold-metallic);
+  color: #0d0d0d;
+  font-weight: 700;
+  border-color: transparent;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Vehicle card image zoom */
+.vehicle-img-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.vehicle-img-wrapper img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover .vehicle-img-wrapper img {
+  transform: scale(1.06);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .floating-whatsapp {
+    bottom: 1.25rem;
+    inset-inline-end: 1.25rem;
+    width: 56px;
+    height: 56px;
+  }
+  .whatsapp-tooltip {
+    display: none;
+  }
+}

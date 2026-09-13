@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLORD CAR | ليموزين ونقل سياحي فاخر في مصر</title>
+  <meta name="description" content="خدمة الليموزين الأولى في مصر - استقبال وتوديع المطارات، سفريات المحافظات، وزفاف العرسان بأرقى أسطول سيارات فاخر وسائقين محترفين." />
+  <meta name="keywords" content="ليموزين مصر, ليموزين مطار القاهرة, ليموزين زفاف, تأجير سيارات فارهة, مرسيدس بسائق, ALLORD CAR" />
+
+  <!-- OpenGraph / Social Media -->
+  <meta property="og:title" content="ALLORD CAR - الفخامة والراحة في كل رحلة" />
+  <meta property="og:description" content="خدمة الليموزين والنقل السياحي الفاخر في مصر. استقبال مطارات وسفريات وزفاف على مدار 24 ساعة." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wa.me/201114085092" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome 6.5.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom Luxury Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Favicon / Apple Touch Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👑</text></svg>">
+</head>
+<body class="bg-[#080808] text-[#EAEAEA] antialiased selection:bg-[#D4AF37] selection:text-black">
+
+  <!-- =========================================================================
+       1. FLOATING HEADER / NAVBAR
+       ========================================================================= -->
+  <header id="mainNavbar" class="fixed top-0 inset-x-0 z-50 transition-all duration-300 luxury-glass py-3.5 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <!-- SVG Monogram / Emblem -->
+        <div class="w-10 h-10 md:w-11 md:h-11 rounded-full border border-[#D4AF37]/50 flex items-center justify-center bg-gradient-to-br from-[#1C1C1C] to-[#0A0A0A] shadow-[0_0_15px_rgba(212,175,55,0.25)] group-hover:border-[#FFD700] transition-all">
+          <svg class="w-6 h-6 text-[#D4AF37] group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="url(#goldGrad)" />
+            <defs>
+              <linearGradient id="goldGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BF953F"/>
+                <stop offset="0.5" stop-color="#FCF6BA"/>
+                <stop offset="1" stop-color="#AA771C"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-xl md:text-2xl font-extrabold tracking-widest text-gold-gradient font-heading">
+            ALLORD CAR
+          </span>
+          <span class="text-[10px] tracking-wider text-[#A3A3A3] uppercase" data-i18n="nav.tagline">
+            ليموزين الفخامة
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-[#B0B0B0]">
+        <a href="#home" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.home">الرئيسية</a>
+        <a href="#services" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.services">خدماتنا</a>
+        <a href="#fleet" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.fleet">أسطول السيارات</a>
+        <a href="#why-us" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.whyUs">لماذا ALLORD</a>
+        <a href="#testimonials" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.testimonials">آراء عملائنا</a>
+        <a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.booking">احجز رحلتك</a>
+        <a href="#contact" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.contact">اتصل بنا</a>
+      </nav>
+
+      <!-- Right Action Controls (Lang Switcher + CTA) -->
+      <div class="hidden sm:flex items-center gap-4">
+        <!-- Language Switcher Button -->
+        <button 
+          id="langToggleBtn" 
+          type="button" 
+          class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#D4AF37]/30 bg-black/40 text-xs font-semibold text-[#EAEAEA] hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all"
+          title="Switch Language"
+        >
+          <i class="fa-solid fa-globe text-[#D4AF37]"></i>
+          <span id="langLabel">English</span>
+        </button>
+
+        <!-- Direct WhatsApp Call/CTA -->
+        <a href="#booking" class="btn-gold text-xs py-2 px-4 md:text-sm md:py-2.5 md:px-5">
+          <i class="fa-solid fa-crown text-xs"></i>
+          <span data-i18n="nav.bookNowBtn">احجز الآن ✦</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <button 
+          id="langToggleMobileSmall" 
+          onclick="document.getElementById('langToggleBtn').click()"
+          class="sm:hidden px-2.5 py-1 rounded border border-[#D4AF37]/40 text-xs text-[#D4AF37]"
+        >
+          <i class="fa-solid fa-globe"></i>
+        </button>
+        <button 
+          id="mobileMenuBtn" 
+          type="button" 
+          class="text-2xl text-[#D4AF37] p-1.5 focus:outline-none"
+          aria-label="Toggle Navigation"
+        >
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Sidebar -->
+  <div id="mobileOverlay" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobileMenuDrawer" class="fixed top-0 bottom-0 z-50 w-72 bg-[#121212] border-x border-[#D4AF37]/30 p-6 flex flex-col justify-between transition-transform duration-300 translate-x-full">
+    <div>
+      <div class="flex items-center justify-between pb-6 border-b border-white/10 mb-6">
+        <span class="text-xl font-bold text-gold-gradient font-heading">ALLORD CAR</span>
+        <button id="mobileMenuCloseBtn" class="text-xl text-neutral-400 hover:text-white">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-4 text-base font-medium">
+        <a href="#home" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.home">الرئيسية</a>
+        <a href="#services" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.services">خدماتنا</a>
+        <a href="#fleet" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.fleet">أسطول السيارات</a>
+        <a href="#why-us" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.whyUs">لماذا ALLORD</a>
+        <a href="#testimonials" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.testimonials">آراء عملائنا</a>
+        <a href="#booking" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.booking">احجز رحلتك</a>
+        <a href="#contact" class="mobile-nav-link text-neutral-200 hover:text-[#D4AF37] py-1" data-i18n="nav.contact">اتصل بنا</a>
+      </nav>
+    </div>
+
+    <div class="space-y-4 pt-6 border-t border-white/10">
+      <button id="mobileLangToggleBtn" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-lg border border-[#D4AF37]/40 text-sm font-semibold text-[#EAEAEA]">
+        <i class="fa-solid fa-globe text-[#D4AF37]"></i>
+        <span>English / العربية</span>
+      </button>
+
+      <a href="https://wa.me/201114085092" target="_blank" class="w-full btn-gold text-sm py-2.5 flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>01114085092</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       2. HERO SECTION WITH LUXURY BACKDROP & QUICK BOOKING WIDGET
+       ========================================================================= -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center pt-28 pb-16 px-4 md:px-8 overflow-hidden">
+    <!-- Cinematic Vehicle Background -->
+    <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=2000&q=85');"></div>
+    <div class="absolute inset-0 z-0 hero-gradient-overlay"></div>
+    <div class="hero-luxury-mesh z-0"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto w-full text-center">
+      
+      <!-- Royal Badge -->
+      <div class="inline-block mb-4 animate-bounce duration-1000">
+        <span class="gold-accent-badge shadow-lg" data-i18n="hero.badge">
+          ★ خدمة الليموزين الملكية الأولى في مصر
+        </span>
+      </div>
+
+      <!-- Main Heading -->
+      <h1 class="text-4xl sm:text-5xl md:text-7xl font-black mb-4 tracking-tight leading-tight">
+        <span class="text-gold-gradient font-heading drop-shadow-md" data-i18n="hero.title">ALLORD CAR</span>
+        <br />
+        <span class="text-white text-2xl sm:text-4xl md:text-5xl font-extrabold" data-i18n="hero.subtitle">
+          الفخامة والراحة في كل رحلة
+        </span>
+      </h1>
+
+      <!-- Description Subtext -->
+      <p class="max-w-3xl mx-auto text-neutral-300 text-sm sm:text-base md:text-lg mb-10 leading-relaxed font-light" data-i18n="hero.description">
+        نقدم لكم أعلى درجات الرفاهية والأمان مع أحدث أسطول ليموزين وسائقين محترفين. استقبال المطارات، السفريات بين المحافظات، وأرقى سيارات زفاف العرسان على مدار 24 ساعة.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+        <a href="#booking" class="btn-gold text-base py-3.5 px-8">
+          <i class="fa-solid fa-calendar-check"></i>
+          <span data-i18n="hero.ctaBooking">احجز رحلتك الآن</span>
+        </a>
+        <a href="#fleet" class="btn-gold-outline text-base py-3.5 px-8">
+          <i class="fa-solid fa-car-rear"></i>
+          <span data-i18n="hero.ctaFleet">استكشف الأسطول</span>
+        </a>
+      </div>
+
+      <!-- Quick Interactive Booking Bar (Hero Widget) -->
+      <div class="luxury-glass-strong rounded-2xl p-4 sm:p-6 shadow-2xl border border-[#D4AF37]/30 text-start max-w-5xl mx-auto backdrop-blur-xl">
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fa-solid fa-bolt text-[#FFD700]"></i>
+          <h3 class="text-sm uppercase tracking-wider font-bold text-[#FFD700]" data-i18n="quickBook.title">الحجز السريع</h3>
+        </div>
+
+        <form id="heroQuickForm" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Service Option -->
+          <div>
+            <label class="block text-xs text-neutral-400 mb-1.5" data-i18n="quickBook.serviceLabel">نوع الخدمة</label>
+            <select id="heroService" class="luxury-input luxury-select text-xs py-2.5">
+              <option value="airport" data-i18n="quickBook.serviceOptAirport">استقبال وتوديع مطار</option>
+              <option value="intercity" data-i18n="quickBook.serviceOptIntercity">سفريات بين المحافظات</option>
+              <option value="wedding" data-i18n="quickBook.serviceOptWedding">زفاف ومناسبات خاصة</option>
+              <option value="vip" data-i18n="quickBook.serviceOptVIP">خدمات رجال الأعمال بالساعة</option>
+            </select>
+          </div>
+
+          <!-- Pickup Location -->
+          <div>
+            <label class="block text-xs text-neutral-400 mb-1.5" data-i18n="quickBook.pickupLabel">مكان الانطلاق</label>
+            <input 
+              type="text" 
+              id="heroPickup" 
+              class="luxury-input text-xs py-2.5" 
+              placeholder="مثال: مطار القاهرة، المعادي..." 
+              data-i18n-placeholder="quickBook.pickupPlaceholder"
+              required 
+            />
+          </div>
+
+          <!-- Destination -->
+          <div>
+            <label class="block text-xs text-neutral-400 mb-1.5" data-i18n="quickBook.destinationLabel">الوجهة</label>
+            <input 
+              type="text" 
+              id="heroDropoff" 
+              class="luxury-input text-xs py-2.5" 
+              placeholder="مثال: الإسكندرية، الساحل..." 
+              data-i18n-placeholder="quickBook.destinationPlaceholder"
+              required 
+            />
+          </div>
+
+          <!-- Quick Date / Submit -->
+          <div class="flex items-end">
+            <button type="submit" class="w-full btn-gold text-xs py-3 tracking-wide">
+              <span data-i18n="quickBook.submitBtn">متابعة الحجز الذكي ❯</span>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Trust Badges & Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 border-t border-white/10 pt-10">
+        <div>
+          <span class="block text-2xl md:text-3xl font-black text-gold-gradient font-heading" data-i18n="hero.stat1Val">100%</span>
+          <span class="text-xs md:text-sm text-neutral-400" data-i18n="hero.stat1Lbl">التزام بالمواعيد</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-black text-gold-gradient font-heading" data-i18n="hero.stat2Val">24/7</span>
+          <span class="text-xs md:text-sm text-neutral-400" data-i18n="hero.stat2Lbl">دعم وخدمة متواصلة</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-black text-gold-gradient font-heading" data-i18n="hero.stat3Val">50+</span>
+          <span class="text-xs md:text-sm text-neutral-400" data-i18n="hero.stat3Lbl">سيارة فاخرة حديثة</span>
+        </div>
+        <div>
+          <span class="block text-2xl md:text-3xl font-black text-gold-gradient font-heading" data-i18n="hero.stat4Val">10K+</span>
+          <span class="text-xs md:text-sm text-neutral-400" data-i18n="hero.stat4Lbl">عميل VIP سعيد</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       3. SERVICES SECTION (الخدمات)
+       ========================================================================= -->
+  <section id="services" class="py-24 px-4 md:px-8 max-w-7xl mx-auto fade-in-section">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="gold-accent-badge mb-3" data-i18n="services.sectionBadge">خدماتنا الراقية</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 font-heading" data-i18n="services.title">
+        حلول تنقل فاخرة صُممت لراحتكم
+      </h2>
+      <p class="text-neutral-400 text-sm md:text-base" data-i18n="services.subtitle">
+        نضع بين أيديكم خبرة سنوات في تقديم أرقى خدمات الليموزين والنقل السياحي في جمهورية مصر العربية.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Service 1: Airport Transfers -->
+      <div class="luxury-card p-8 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#241F10] to-[#141414] border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-2xl mb-6 group-hover:scale-110 group-hover:border-[#FFD700] transition-all">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors" data-i18n="services.airportTitle">
+            رحلات واستقبال المطارات
+          </h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6" data-i18n="services.airportDesc">
+            استقبال وتوديع VIP في مطارات القاهرة، برج العرب، سفنكس، وشرم الشيخ. تتبع دقيق لمواعيد الرحلات مع لافتة استقبال باسم العميل ومساعدة في الأمتعة.
+          </p>
+          <ul class="space-y-2.5 text-xs text-neutral-300 mb-8 border-t border-neutral-800/80 pt-4">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.airportFeature1">تتبع مواعيد الطائرات لحظياً</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.airportFeature2">خدمة الاستقبال والترحيب VIP</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.airportFeature3">سائق خاص في انتظارك بالصالة</span>
+            </li>
+          </ul>
+        </div>
+        <a href="#booking" class="btn-gold-outline text-xs py-2.5 text-center block w-full" data-i18n="services.bookServiceBtn">
+          طلب هذه الخدمة
+        </a>
+      </div>
+
+      <!-- Service 2: Intercity Travel -->
+      <div class="luxury-card p-8 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#241F10] to-[#141414] border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-2xl mb-6 group-hover:scale-110 group-hover:border-[#FFD700] transition-all">
+            <i class="fa-solid fa-road"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors" data-i18n="services.intercityTitle">
+            السفريات والرحلات بين المحافظات
+          </h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6" data-i18n="services.intercityDesc">
+            سافر براحة تامة وأمان مطلق بين كافة محافظات مصر: الإسكندرية، الساحل الشمالي، العين السخنة، الغردقة، الصعيد. سيارات مجهزة بأقصى وسائل الراحة.
+          </p>
+          <ul class="space-y-2.5 text-xs text-neutral-300 mb-8 border-t border-neutral-800/80 pt-4">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.intercityFeature1">طرق وسفر سلس بأحدث الموديلات</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.intercityFeature2">ضيافة وانترنت Wi-Fi فائق السرعة</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.intercityFeature3">سائقون محترفون بمعرفة كاملة بالطرق</span>
+            </li>
+          </ul>
+        </div>
+        <a href="#booking" class="btn-gold-outline text-xs py-2.5 text-center block w-full" data-i18n="services.bookServiceBtn">
+          طلب هذه الخدمة
+        </a>
+      </div>
+
+      <!-- Service 3: Luxury Wedding Transportation -->
+      <div class="luxury-card p-8 flex flex-col justify-between group">
+        <div>
+          <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#241F10] to-[#141414] border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] text-2xl mb-6 group-hover:scale-110 group-hover:border-[#FFD700] transition-all">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-[#D4AF37] transition-colors" data-i18n="services.weddingTitle">
+            زفاف العرسان والمناسبات الخاصة
+          </h3>
+          <p class="text-neutral-400 text-sm leading-relaxed mb-6" data-i18n="services.weddingDesc">
+            اجعل ليلة العمر لا تُنسى مع أرقى سيارات الزفاف والليموزين الممتد المزينة بأناقة متناهية، مع سائق بزي رسمي يليق بفخامة مناسبتكم.
+          </p>
+          <ul class="space-y-2.5 text-xs text-neutral-300 mb-8 border-t border-neutral-800/80 pt-4">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.weddingFeature1">تزيين احترافي فاخر حسب الطلب</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.weddingFeature2">مرافقة كاملة طوال يوم الزفاف</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-check text-[#D4AF37]"></i>
+              <span data-i18n="services.weddingFeature3">سيارات كشف وليموزين كلاسيكي وحديث</span>
+            </li>
+          </ul>
+        </div>
+        <a href="#booking" class="btn-gold-outline text-xs py-2.5 text-center block w-full" data-i18n="services.bookServiceBtn">
+          طلب هذه الخدمة
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       4. FLEET SHOWCASE (أسطول السيارات)
+       ========================================================================= -->
+  <section id="fleet" class="py-24 px-4 md:px-8 max-w-7xl mx-auto fade-in-section">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="gold-accent-badge mb-3" data-i18n="fleet.sectionBadge">أسطولنا الحصري</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 font-heading" data-i18n="fleet.title">
+        نخبة السيارات الفارهة الأكثر فخامة
+      </h2>
+      <p class="text-neutral-400 text-sm md:text-base" data-i18n="fleet.subtitle">
+        سيارات موديل السنة بحالة الوكالة، معقمة ومجهزة بكافة وسائل الراحة والترفيه التكنولوجي.
+      </p>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 mt-8">
+        <button type="button" class="fleet-tab-btn active" data-filter="all" data-i18n="fleet.tabAll">جميع السيارات</button>
+        <button type="button" class="fleet-tab-btn" data-filter="sedan" data-i18n="fleet.tabSedan">سيدان فاخرة</button>
+        <button type="button" class="fleet-tab-btn" data-filter="suv" data-i18n="fleet.tabSuv">دفع رباعي VIP</button>
+        <button type="button" class="fleet-tab-btn" data-filter="limousine" data-i18n="fleet.tabLimousine">ليموزين مناسبات</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Fleet Grid (Rendered by js/app.js) -->
+    <div id="fleetGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Fleet cards injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       5. INTERACTIVE BOOKING FORM SYSTEM (نظام الحجز الذكي)
+       ========================================================================= -->
+  <section id="booking" class="py-24 px-4 md:px-8 relative overflow-hidden fade-in-section">
+    <!-- Subtle Ambient Background Light -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+      <div class="text-center mb-12">
+        <span class="gold-accent-badge mb-3" data-i18n="bookingForm.sectionBadge">نظام الحجز الذكي</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 font-heading" data-i18n="bookingForm.title">
+          احجز رحلتك الفاخرة عبر واتساب
+        </h2>
+        <p class="text-neutral-400 text-sm md:text-base max-w-2xl mx-auto" data-i18n="bookingForm.subtitle">
+          أدخل بيانات رحلتك وسيتم توليد رسالة حجز رسمية ومفصلة ونقلك مباشرة إلى محادثة واتساب مع فريق خدمة عملاء ALLORD CAR للتأكيد الفوري.
+        </p>
+      </div>
+
+      <!-- Booking Card Form -->
+      <div class="booking-highlight-box luxury-glass-strong rounded-2xl p-6 sm:p-10 border border-[#D4AF37]/35 shadow-2xl transition-all duration-500">
+        <form id="bookingForm" class="space-y-6">
+          
+          <!-- Row 1: Full Name & Phone Number -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelName">
+                الاسم الكريم <span class="text-[#D4AF37]">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="clientName" 
+                  required 
+                  class="luxury-input" 
+                  placeholder="أدخل اسمك بالكامل"
+                  data-i18n-placeholder="bookingForm.placeholderName" 
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelPhone">
+                رقم الهاتف / الواتساب <span class="text-[#D4AF37]">*</span>
+              </label>
+              <div class="relative">
+                <input 
+                  type="tel" 
+                  id="clientPhone" 
+                  required 
+                  class="luxury-input" 
+                  placeholder="+20 1XX XXX XXXX"
+                  data-i18n-placeholder="bookingForm.placeholderPhone" 
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Service Type & Vehicle Preference -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelService">
+                نوع الخدمة المطلوبة <span class="text-[#D4AF37]">*</span>
+              </label>
+              <select id="serviceSelect" class="luxury-input luxury-select" required>
+                <option value="airport" data-i18n="quickBook.serviceOptAirport">استقبال وتوديع مطار</option>
+                <option value="intercity" data-i18n="quickBook.serviceOptIntercity">سفريات بين المحافظات</option>
+                <option value="wedding" data-i18n="quickBook.serviceOptWedding">زفاف ومناسبات خاصة</option>
+                <option value="vip" data-i18n="quickBook.serviceOptVIP">خدمات رجال الأعمال بالساعة</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelVehicle">
+                السيارة المفضلة
+              </label>
+              <select id="vehicleSelect" class="luxury-input luxury-select">
+                <!-- Injected dynamically based on fleetData -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 3: Pickup & Drop-off Locations -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelPickup">
+                نقطة الانطلاق (عنوان أو مطار) <span class="text-[#D4AF37]">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="pickupLocation" 
+                required 
+                class="luxury-input" 
+                placeholder="مثال: صالة 3 مطار القاهرة، أو مدينتي..."
+                data-i18n-placeholder="bookingForm.placeholderPickup" 
+              />
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelDropoff">
+                وجهة الوصول <span class="text-[#D4AF37]">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="dropoffLocation" 
+                required 
+                class="luxury-input" 
+                placeholder="مثال: سموحة الإسكندرية، مراسي..."
+                data-i18n-placeholder="bookingForm.placeholderDropoff" 
+              />
+            </div>
+          </div>
+
+          <!-- Row 4: Date & Time Picker -->
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelDateTime">
+              تاريخ ووقت الرحلة
+            </label>
+            <input 
+              type="text" 
+              id="pickupDateTime" 
+              class="luxury-input" 
+              placeholder="مثال: 15 أكتوبر - الساعة 8:30 مساءً" 
+            />
+          </div>
+
+          <!-- Row 5: Notes / Flight Number -->
+          <div>
+            <label class="block text-xs font-semibold text-neutral-300 mb-2" data-i18n="bookingForm.labelNotes">
+              ملاحظات إضافية / رقم الرحلة الجوية
+            </label>
+            <textarea 
+              id="clientNotes" 
+              rows="3" 
+              class="luxury-input resize-none" 
+              placeholder="أي متطلبات خاصة (مقعد أطفال، لافتة استقبال باسم معين، موعد هبوط الطائرة...)"
+              data-i18n-placeholder="bookingForm.placeholderNotes"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="pt-3">
+            <button 
+              type="submit" 
+              id="submitBookingBtn"
+              class="w-full btn-gold text-base sm:text-lg py-4 shadow-xl flex items-center justify-center gap-3 font-bold"
+            >
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span data-i18n="bookingForm.submitWhatsApp">تأكيد الحجز عبر واتساب فوراً 📲</span>
+            </button>
+            <p class="text-center text-xs text-neutral-400 mt-4" data-i18n="bookingForm.guarantee">
+              🔒 حجزك مؤكد ومباشر مع الإدارة بدون وسيط | رقم الحجز المباشر: 01114085092
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       6. WHY CHOOSE US (المميزات والريادة)
+       ========================================================================= -->
+  <section id="why-us" class="py-24 px-4 md:px-8 max-w-7xl mx-auto fade-in-section">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="gold-accent-badge mb-3" data-i18n="whyUs.sectionBadge">التميز والريادة</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 font-heading" data-i18n="whyUs.title">
+        لماذا يختار النخبة ALLORD CAR؟
+      </h2>
+      <p class="text-neutral-400 text-sm md:text-base" data-i18n="whyUs.subtitle">
+        نحن لا نقدم مجرد وسيلة مواصلات، بل نصنع تجربة تنقل راقية ومريحة تبقى في ذاكرتك.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      
+      <!-- Feature 1 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f1Title">سائقون ببروتوكول احترافي</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f1Desc">
+            فريق من أمهر السائقين ذوي الخبرة الواسعة، يرتدون زياً رسمياً أنيقاً ويلتزمون بأعلى معايير الخصوصية واللباقة.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f2Title">انضباط 100% في المواعيد</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f2Desc">
+            ندرك تماماً قيمة وقتك؛ سيارتك في انتظارك قبل الموعد المحدد بـ 15 دقيقة مع تتبع حي ومباشر لحركة السير.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-sparkles"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f3Title">أسطول حديث ومجهز بالكامل</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f3Desc">
+            جميع سياراتنا موديلات حديثة ومجهزة بخدمة Wi-Fi مجانية، شواحن ذكية، مياه معدنية، وتعقيم شامل قبل كل رحلة.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f4Title">أسعار تنافسية وشفافة</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f4Desc">
+            أفضل قيمة مقابل فخامة الخدمة دون أي رسوم خفية أو مفاجآت. أسعار ثابتة ومنافسة مع فواتير رسمية عند الطلب.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-map-location-dot"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f5Title">تغطية كاملة لجميع المحافظات</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f5Desc">
+            خدماتنا تغطي القاهرة الكبرى، الإسكندرية، الساحل الشمالي، الغردقة، شرم الشيخ وكافة أنحاء جمهورية مصر العربية.
+          </p>
+        </div>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="luxury-card p-6 flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-[#D4AF37]/10 border border-[#D4AF37]/30 flex-shrink-0 flex items-center justify-center text-[#D4AF37] text-xl">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-white mb-1.5" data-i18n="whyUs.f6Title">أمان مطلق وخصوصية</h3>
+          <p class="text-neutral-400 text-xs leading-relaxed" data-i18n="whyUs.f6Desc">
+            زجاج معتم للخصوصية، أنظمة أمان متطورة، وسرية تامة لمعلومات وبيانات كافة عملائنا الكرام.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       7. TESTIMONIALS (آراء العملاء)
+       ========================================================================= -->
+  <section id="testimonials" class="py-24 px-4 md:px-8 max-w-7xl mx-auto fade-in-section">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="gold-accent-badge mb-3" data-i18n="testimonials.sectionBadge">شهادات نعتز بها</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 font-heading" data-i18n="testimonials.title">
+        ماذا يقول عملاء ALLORD CAR؟
+      </h2>
+      <p class="text-neutral-400 text-sm md:text-base" data-i18n="testimonials.subtitle">
+        نفخر بثقة كبار الشخصيات، رجال الأعمال، والعائلات الراقية الذين شاركونا رحلاتهم.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Review 1 -->
+      <div class="luxury-card p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex text-[#FFD700] text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-neutral-300 text-sm italic leading-relaxed mb-6" data-i18n="testimonials.t1Text">
+            "خدمة راقية جداً في استقبال مطار القاهرة. السائق كان في انتظاري باللافتة والسيارة مرسيدس S-Class نظيفة كأنها خارجة من المعرض. احترافية تضاهي كبرى شركات الليموزين في أوروبا."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 border-t border-neutral-800 pt-4">
+          <div class="w-10 h-10 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] font-bold">
+            ط
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white" data-i18n="testimonials.t1Author">م. طارق العوضي</h3>
+            <span class="text-xs text-neutral-400" data-i18n="testimonials.t1Role">رجل أعمال - دبي / القاهرة</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="luxury-card p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex text-[#FFD700] text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-neutral-300 text-sm italic leading-relaxed mb-6" data-i18n="testimonials.t2Text">
+            "حجزت سيارة كاديلاك إسكاليد لرحلة الساحل الشمالي مع عائلتي. القيادة كانت غاية في السلاسة والأمان، والمقاعد مريحة للغاية للأطفال. بالتأكيد خياري الدائم في مصر."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 border-t border-neutral-800 pt-4">
+          <div class="w-10 h-10 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] font-bold">
+            س
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white" data-i18n="testimonials.t2Author">د. سامح عبد الوهاب</h3>
+            <span class="text-xs text-neutral-400" data-i18n="testimonials.t2Role">استشاري واستاذ جامعي</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="luxury-card p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex text-[#FFD700] text-sm gap-1 mb-4">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-neutral-300 text-sm italic leading-relaxed mb-6" data-i18n="testimonials.t3Text">
+            "تعاملت مع ALLORD CAR في موكب زفافنا. الالتزام بالموعد والديكور الرائع للسيارة كان سبباً رئيسياً في راحة بالنا في يوم مهم جداً. شكراً لكل الفريق ولخدمة العملاء السريعة على واتساب."
+          </p>
+        </div>
+        <div class="flex items-center gap-3 border-t border-neutral-800 pt-4">
+          <div class="w-10 h-10 rounded-full bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex items-center justify-center text-[#D4AF37] font-bold">
+            ك
+          </div>
+          <div>
+            <h3 class="text-sm font-bold text-white" data-i18n="testimonials.t3Author">كريم ونورهان</h3>
+            <span class="text-xs text-neutral-400" data-i18n="testimonials.t3Role">عرسان - القاهرة</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gold Gradient Divider -->
+  <div class="gold-divider"></div>
+
+  <!-- =========================================================================
+       8. FOOTER & DIRECT CONTACT
+       ========================================================================= -->
+  <footer id="contact" class="bg-[#050505] border-t border-neutral-900 pt-16 pb-10 px-4 md:px-8 text-neutral-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      
+      <!-- Col 1: Brand Info -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-9 h-9 rounded-full border border-[#D4AF37]/40 flex items-center justify-center bg-black">
+            <i class="fa-solid fa-crown text-[#D4AF37] text-sm"></i>
+          </div>
+          <span class="text-xl font-bold text-gold-gradient font-heading">ALLORD CAR</span>
+        </div>
+        <p class="text-xs leading-relaxed text-neutral-400 mb-6" data-i18n="footer.brandDesc">
+          ALLORD CAR هي الشركة الرائدة في خدمات الليموزين، استقبال المطارات، السفريات، وتأجير السيارات الفاخرة بسائق في مصر. فخامة وأمان على مدار الساعة.
+        </p>
+        <div class="flex items-center gap-3 text-base">
+          <a href="https://wa.me/201114085092" target="_blank" class="w-8 h-8 rounded-lg bg-[#141414] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors" title="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+          <a href="tel:+201114085092" class="w-8 h-8 rounded-lg bg-[#141414] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors" title="Phone">
+            <i class="fa-solid fa-phone"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" class="w-8 h-8 rounded-lg bg-[#141414] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors" title="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-lg bg-[#141414] border border-[#D4AF37]/30 flex items-center justify-center text-[#D4AF37] hover:bg-[#D4AF37] hover:text-black transition-colors" title="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div>
+        <h4 class="text-white font-bold mb-4 font-heading" data-i18n="footer.quickLinks">روابط سريعة</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#home" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.home">الرئيسية</a></li>
+          <li><a href="#services" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.services">خدماتنا</a></li>
+          <li><a href="#fleet" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.fleet">أسطول السيارات</a></li>
+          <li><a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.booking">احجز رحلتك</a></li>
+          <li><a href="#why-us" class="hover:text-[#D4AF37] transition-colors" data-i18n="nav.whyUs">لماذا ALLORD</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Services Links -->
+      <div>
+        <h4 class="text-white font-bold mb-4 font-heading" data-i18n="footer.ourServices">خدماتنا</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="services.airportTitle">رحلات واستقبال المطارات</a></li>
+          <li><a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="services.intercityTitle">السفريات بين المحافظات</a></li>
+          <li><a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="services.weddingTitle">زفاف العرسان والمناسبات</a></li>
+          <li><a href="#booking" class="hover:text-[#D4AF37] transition-colors" data-i18n="services.vipCorporateTitle">تأجير لرجال الأعمال والشركات</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Info -->
+      <div>
+        <h4 class="text-white font-bold mb-4 font-heading" data-i18n="footer.contactHeading">بيانات التواصل المباشر</h4>
+        <div class="space-y-3 text-xs">
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-phone text-[#D4AF37]"></i>
+            <div>
+              <span class="block text-[11px] text-neutral-500" data-i18n="footer.phoneLabel">الهاتف / واتساب:</span>
+              <a href="tel:+201114085092" class="text-white font-bold hover:text-[#D4AF37]" dir="ltr">+20 111 408 5092</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i class="fa-brands fa-whatsapp text-[#25D366]"></i>
+            <div>
+              <span class="block text-[11px] text-neutral-500">WhatsApp Chat:</span>
+              <a href="https://wa.me/201114085092" target="_blank" class="text-[#25D366] font-bold hover:underline" dir="ltr">+20 111 408 5092</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fa-solid fa-location-dot text-[#D4AF37] mt-0.5"></i>
+            <div>
+              <span class="block text-[11px] text-neutral-500" data-i18n="footer.serviceAreaLabel">منطقة التغطية:</span>
+              <span data-i18n="footer.serviceAreaVal">القاهرة، الإسكندرية، الساحل الشمالي، شرم الشيخ، وكافة محافظات مصر</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <i class="fa-solid fa-clock text-[#D4AF37]"></i>
+            <div>
+              <span class="block text-[11px] text-neutral-500" data-i18n="footer.hoursLabel">ساعات العمل:</span>
+              <span data-i18n="footer.hoursVal">خدمة عملاء وحجوزات متاحة 24/7 طوال أيام الأسبوع</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto border-t border-neutral-800/60 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+      <p data-i18n="footer.copyright">جميع الحقوق محفوظة © 2025 ALLORD CAR لخدمات الليموزين والنقل الفاخر.</p>
+      <p class="text-[#D4AF37]" data-i18n="footer.craftedWith">الفخامة والراحة في كل رحلة</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       9. FLOATING WHATSAPP ACTION BUTTON WITH PULSING GOLD HALO
+       ========================================================================= -->
+  <a 
+    href="https://wa.me/201114085092" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="floating-whatsapp"
+    aria-label="Contact ALLORD CAR on WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <span class="whatsapp-tooltip">
+      <span class="text-[#25D366]">WhatsApp VIP</span> · 01114085092
+    </span>
+  </a>
+
+  <!-- Translation Dictionary & App Logic Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
