@@ -3,7 +3,7 @@
  * Fast Caching & Offline VIP Limousine Experience
  */
 
-const CACHE_NAME = 'allord-car-v1';
+const CACHE_NAME = 'allord-car-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
@@ -14,7 +14,18 @@ const ASSETS_TO_CACHE = [
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon.svg',
-  './assets/icons/apple-touch-icon.png'
+  './assets/icons/apple-touch-icon.png',
+  './assets/cars/mercedes-e-class-black-amg.jpg',
+  './assets/cars/mercedes-e-class-exclusive.jpg',
+  './assets/cars/mercedes-c-class-white-gt.jpg',
+  './assets/cars/hummer-white-lambo-doors.jpg',
+  './assets/cars/range-rover-evoque-white.jpg',
+  './assets/cars/chrysler-300c-white-wedding.jpg',
+  './assets/cars/chrysler-300c-black-wedding.jpg',
+  './assets/cars/mg-zs-blue-wedding.jpg',
+  './assets/cars/mg5-blue-wedding.jpg',
+  './assets/cars/mg5-black-wedding.jpg',
+  './assets/cars/chevrolet-optra-wedding.jpg'
 ];
 
 // Install Event

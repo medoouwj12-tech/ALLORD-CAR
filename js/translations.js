@@ -349,150 +349,270 @@ const translations = {
   }
 };
 
-// Vehicle database with specifications and high-res photography
+// Real Fleet database populated directly from ALLORD CAR photos
 const fleetData = [
   {
-    id: "mercedes-s-class",
+    id: "mercedes-e-class-black-amg",
     category: "sedan",
     name: {
-      ar: "مرسيدس بنز مايباخ / S-Class",
-      en: "Mercedes-Benz Maybach / S-Class"
+      ar: "مرسيدس بنز E-Class بلاك AMG",
+      en: "Mercedes-Benz E-Class Black AMG"
     },
     subtitle: {
-      ar: "سيدان رجال الأعمال والفخامة المطلقة",
-      en: "The Benchmark of Executive Luxury"
+      ar: "سيدان رجال الأعمال واستقبال المطارات الفاخر",
+      en: "Executive VIP Sedan for Airport & Business Travel"
     },
-    image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1622200294736-86877995a5f1?auto=format&fit=crop&w=1000&q=80",
+    image: "assets/cars/mercedes-e-class-black-amg.jpg",
+    fallbackImg: "assets/cars/mercedes-e-class-exclusive.jpg",
     passengers: "3 - 4",
     luggage: "3",
     tag: {
-      ar: "الأكثر طلباً",
-      en: "Most Popular"
+      ar: "VIP الأكثر طلباً",
+      en: "Most Popular VIP"
     },
     features: {
-      ar: ["مقاعد مساج وتبريد", "إضاءة محيطية 64 لون", "شاشات ترفيه خلفية", "واي فاي 5G فائق السرعة"],
-      en: ["Massage & Climate Seats", "64-Color Ambient Lighting", "Rear Entertainment Screens", "Ultra-fast 5G Wi-Fi"]
+      ar: ["شبك AMG دياموند وفخامة ألمانية", "مقاعد جلدية مريحة وتكييف خلفي مزدوج", "مثالية لاستقبال مطار القاهرة والوفود", "واي فاي وشواحن ذكية وضيافة كاملة"],
+      en: ["AMG Diamond Grille & German Luxury", "Leather Comfort Seats & Dual Rear Climate", "Ideal for Cairo Airport VIP & Delegations", "High-speed Wi-Fi & Device Chargers"]
     }
   },
   {
-    id: "rolls-royce-ghost",
+    id: "mercedes-e-class-exclusive",
     category: "sedan",
     name: {
-      ar: "رولز رويس جوست VIP",
-      en: "Rolls-Royce Ghost VIP"
+      ar: "مرسيدس بنز E-Class إكسكلوسيف",
+      en: "Mercedes-Benz E-Class Exclusive"
     },
     subtitle: {
-      ar: "قمة الوجاهة الملكية والمناسبات الأرقى",
-      en: "Royal Elegance & Grand Occasions"
+      ar: "الفخامة الكلاسيكية للنجمة الفضية على البحر والسفريات",
+      en: "Classic Standing-Star Prestige for Intercity Travel"
     },
-    image: "https://images.unsplash.com/photo-1631295868223-63265b40d9e4?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1000&q=80",
-    passengers: "4",
-    luggage: "3",
-    tag: {
-      ar: "ملكية VIP",
-      en: "Royal VIP"
-    },
-    features: {
-      ar: ["سقف النجوم المضيء Starlight", "عزل صوتي فائق الهدوء", "ضيافة VIP فاخرة", "أبواب شفط كهربائية"],
-      en: ["Starlight Headliner", "Whisper-Quiet Soundproofing", "VIP Refreshment Console", "Soft-Close Coach Doors"]
-    }
-  },
-  {
-    id: "cadillac-escalade",
-    category: "suv",
-    name: {
-      ar: "كاديلاك إسكاليد ESV الرئاسية",
-      en: "Cadillac Escalade ESV Presidential"
-    },
-    subtitle: {
-      ar: "رحابة قصوى وهيبة تلفت الأنظار",
-      en: "Commanding Presence & Ultimate Space"
-    },
-    image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1000&q=80",
-    passengers: "6 - 7",
-    luggage: "6",
-    tag: {
-      ar: "دفع رباعي عائلي",
-      en: "Executive SUV"
-    },
-    features: {
-      ar: ["شاشات OLED منحنية 38 إنش", "نظام صوتي AKG Studio 36 مكبر", "سعة أمتعة ضخمة للسفر", "زجاج خصوصية معتم"],
-      en: ["38-inch Curved OLED Displays", "AKG Studio 36-Speaker Sound", "Massive Cargo Capacity", "Deep Privacy Glass"]
-    }
-  },
-  {
-    id: "bmw-7-series",
-    category: "sedan",
-    name: {
-      ar: "بي إم دبليو الفئة السابعة 740i",
-      en: "BMW 7 Series 740i Executive"
-    },
-    subtitle: {
-      ar: "تطور تكنولوجي وأداء رياضي فاخر",
-      en: "Futuristic Tech & Executive Dynamics"
-    },
-    image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80",
+    image: "assets/cars/mercedes-e-class-exclusive.jpg",
+    fallbackImg: "assets/cars/mercedes-e-class-black-amg.jpg",
     passengers: "3 - 4",
     luggage: "3",
     tag: {
-      ar: "تكنولوجيا حديثة",
-      en: "High-Tech"
+      ar: "نجمة كلاسيكية",
+      en: "Classic Star"
     },
     features: {
-      ar: ["شاشة مسرح 31 إنش Cinema Screen", "تحكم رقمي Touch Command بالأبواب", "نظام تعليق هوائي فائق النعومة", "شحن لاسلكي متعدد"],
-      en: ["31.3-inch Theatre Display", "Touch Command Door Controls", "Air Suspension Gliding Ride", "Wireless Multi-Device Charging"]
+      ar: ["شبك كلاسيكي بنجمة مرسيدس الواقفة", "سفر سلس ومريح بين كافة المحافظات", "عزل صوتي فائق ونظام تعليق ناعم", "تعقيم شامل وضيافة VIP قبل كل رحلة"],
+      en: ["Standing Star Classic Chrome Grille", "Ultra-smooth Intercity Travel Across Egypt", "Whisper-quiet Acoustic Insulation", "Fully Sanitized with VIP Amenities"]
     }
   },
   {
-    id: "range-rover-vogue",
-    category: "suv",
+    id: "mercedes-c-class-white-wedding",
+    category: "limousine",
     name: {
-      ar: "رينج روفر أوتوبيوغرافي",
-      en: "Range Rover Autobiography"
+      ar: "مرسيدس بنز C-Class زفاف ملكي بيضاء",
+      en: "Mercedes-Benz C-Class White Wedding"
     },
     subtitle: {
-      ar: "الفخامة البريطانية على كافة الطرقات",
-      en: "British Aristocracy & All-Road Mastery"
+      ar: "سيارة زفاف العرسان الملكية مع باقة الورد الفاخرة",
+      en: "Royal White Bridal Sedan with Floral Styling"
     },
-    image: "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1508974239320-0a029497e820?auto=format&fit=crop&w=1000&q=80",
+    image: "assets/cars/mercedes-c-class-white-gt.jpg",
+    fallbackImg: "assets/cars/mercedes-c-class-white-exclusive.jpg",
+    passengers: "3 - 4",
+    luggage: "2",
+    tag: {
+      ar: "زفاف العرسان",
+      en: "Wedding Special"
+    },
+    features: {
+      ar: ["تزيين ورود طبيعية أنيقة لليلة العمر", "شبك Panamericana رياضي فاره", "سائق ببدلة رسمية وأعلى درجات اللباقة", "مرافقة كاملة طوال موكب ويوم الزفاف"],
+      en: ["Elegant Fresh Flower Bridal Styling", "Panamericana GT Sport Grille", "Chauffeur in Tuxedo & Formal Protocol", "Full Day Wedding Convoy Escort"]
+    }
+  },
+  {
+    id: "hummer-white-lambo-doors",
+    category: "suv",
+    name: {
+      ar: "هامر VIP بأبواب فراشة (Lambo Doors)",
+      en: "Hummer White VIP Lambo Doors"
+    },
+    subtitle: {
+      ar: "الوحش الأمريكي الفاخر بأبواب تفتح للأعلى للمناسبات والمواكب",
+      en: "American Luxury SUV with Vertical Scissor Doors"
+    },
+    image: "assets/cars/hummer-white-lambo-doors.jpg",
+    fallbackImg: "assets/cars/hummer-white-side.jpg",
+    passengers: "5 - 6",
+    luggage: "5",
+    tag: {
+      ar: "أبواب فراشة مميزة",
+      en: "Lambo Doors VIP"
+    },
+    features: {
+      ar: ["أبواب فراشة Lambo تفتح للأعلى لهيبة استثنائية", "إطلالة ملفتة للأنظار في الزفاف وجلسات التصوير", "مقصورة رحبة ومريحة جداً", "نظام صوتي ضخم وقوي وإضاءات حماسية"],
+      en: ["Vertical Opening Scissor Doors", "Head-Turning Wedding & Photoshoot Presence", "Expansive VIP Passenger Cabin", "High-Power Audio & Dynamic Presence"]
+    }
+  },
+  {
+    id: "range-rover-evoque-white",
+    category: "suv",
+    name: {
+      ar: "رينج روفر إيفوك بيضاء فاخرة",
+      en: "Range Rover Evoque White Luxury"
+    },
+    subtitle: {
+      ar: "الفخامة البريطانية والأناقة العصرية لرجال الأعمال والرحلات",
+      en: "British Elegance & Contemporary Executive Style"
+    },
+    image: "assets/cars/range-rover-evoque-white.jpg",
+    fallbackImg: "assets/cars/hummer-white-lambo-doors.jpg",
     passengers: "4",
     luggage: "4",
     tag: {
-      ar: "راحة مطلقة",
-      en: "Unmatched Comfort"
+      ar: "دفع رباعي فاخر",
+      en: "Luxury SUV"
     },
     features: {
-      ar: ["مقاعد Executive Class الخلفية", "تنقية هواء المقصورة بتقنية Nanoe", "ثلاجة مدمجة للمرطبات", "دفع رباعي ذكي وسلس"],
-      en: ["Executive Class Rear Seating", "Nanoe Air Purification", "Integrated Center Chiller", "Intelligent Smooth All-Wheel Drive"]
+      ar: ["تصميم بريطاني فاره وسقف بانوراما أسود", "دفع رباعي ذكي وسفر سلس للساحل والمنتجعات", "مقاعد جلدية فاخرة ومقصورة هادئة", "إطلالة راقية أمام الفنادق والڤلل"],
+      en: ["Prestigious British Styling & Panoramic Roof", "Intelligent AWD for Coastal & City Trips", "Plush Leather Cabin & Whisper-Quiet Ride", "Commanding Appearance at 5-Star Venues"]
     }
   },
   {
-    id: "stretch-limousine",
+    id: "chrysler-300c-white-wedding",
     category: "limousine",
     name: {
-      ar: "ليموزين الزفاف الممتد (Stretch Limo)",
-      en: "Royal Stretch Wedding Limousine"
+      ar: "كرايسلر 300C ليموزين زفاف بيضاء",
+      en: "Chrysler 300C White Wedding Limousine"
     },
     subtitle: {
-      ar: "الموكب الأسطوري لليلة العمر وحفلات الزفاف",
-      en: "The Legendary Grand Bridal Convoy"
+      ar: "الليموزين الأمريكي الكلاسيكي لزفاف ملكي وشبك رولز رويس",
+      en: "Classic American Limousine with Rolls-Style Grille"
     },
-    image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1000&q=80",
-    fallbackImg: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1000&q=80",
-    passengers: "8 - 10",
-    luggage: "5",
+    image: "assets/cars/chrysler-300c-white-wedding.jpg",
+    fallbackImg: "assets/cars/mercedes-c-class-white-gt.jpg",
+    passengers: "4 - 5",
+    luggage: "3",
     tag: {
-      ar: "زفاف ومناسبات",
-      en: "Wedding & Gala"
+      ar: "ليموزين زفاف",
+      en: "Royal Limo"
     },
     features: {
-      ar: ["صالون فندقي VIP متصل", "بار ضيافة فاخر وإضاءات ليزر", "ستائر خصوصية وحاجز عازل", "تجهيز ورود الزفاف عند الطلب"],
-      en: ["Lounge VIP J-Seating", "Illuminated Bar & Disco Starlight", "Full Privacy Divider Screen", "Bridal Floral Arrangement"]
+      ar: ["شبك أمامي كروم فخم مستوحى من رولز رويس", "تزيين احترافي بباقات ورود العروسين", "جنوط كروم لامعة ومقاعد واسعة جداً", "تجربة زفاف لا تُنسى في كل صورة"],
+      en: ["Rolls-Royce Inspired Chrome Front Grille", "Custom Bridal Floral Arrangement", "Polished Chrome Alloys & Spacious Cabin", "Unforgettable Wedding Convoy Experience"]
+    }
+  },
+  {
+    id: "chrysler-300c-black-wedding",
+    category: "sedan",
+    name: {
+      ar: "كرايسلر 300C بلاك شبك بنتلي VIP",
+      en: "Chrysler 300C Black Bentley Style VIP"
+    },
+    subtitle: {
+      ar: "هيبة اللون الأسود الملكي وشبك بنتلي الماسي مع بوكيه ورد",
+      en: "Commanding Black Presence with Bentley Mesh Grille"
+    },
+    image: "assets/cars/chrysler-300c-black-wedding.jpg",
+    fallbackImg: "assets/cars/mercedes-e-class-black-amg.jpg",
+    passengers: "4 - 5",
+    luggage: "3",
+    tag: {
+      ar: "بنتلي ستايل",
+      en: "Bentley Style"
+    },
+    features: {
+      ar: ["شبك أمامي مخصص بشعار B مستوحى من بنتلي", "تزيين ورد فاخر أو خدمة رجال أعمال رسمية", "فتحة سقف وإضاءات زينون قوية", "حضور مهيب يلفت الأنظار في المواكب"],
+      en: ["Bentley-Inspired Custom Mesh Grille with 'B' Emblem", "Floral Wedding Decor or Executive VIP", "Panoramic Sunroof & Xenon Illumination", "Bold Executive Road Presence"]
+    }
+  },
+  {
+    id: "mg-zs-blue-wedding",
+    category: "suv",
+    name: {
+      ar: "إم جي ZS زرقاء ميتاليك زفاف وسفريات",
+      en: "MG ZS Metallic Blue SUV Wedding Edition"
+    },
+    subtitle: {
+      ar: "سيارة SUV عصرية بلون أزرق ساحر وتزيين ورد أنيق",
+      en: "Modern Metallic Blue SUV for Intercity & Weddings"
+    },
+    image: "assets/cars/mg-zs-blue-wedding.jpg",
+    fallbackImg: "assets/cars/mg-zs-blue-suv.jpg",
+    passengers: "4",
+    luggage: "4",
+    tag: {
+      ar: "عصرية وشبابية",
+      en: "Youth & Modern"
+    },
+    features: {
+      ar: ["لون أزرق ميتاليك براق يلفت الأنظار", "تجهيز ورود زفاف أنيقة أو سفريات عائلية", "ارتفاع مناسب لجميع الطرقات وسفر مريح", "تكييف قوي ونظام ترفيه متكامل"],
+      en: ["Vibrant Metallic Blue Eye-Catching Finish", "Bridal Floral Setup or Comfortable Family Trips", "Elevated Ground Clearance for Smooth Travel", "Powerful AC & Integrated Entertainment"]
+    }
+  },
+  {
+    id: "mg5-blue-wedding",
+    category: "sedan",
+    name: {
+      ar: "إم جي سيدان زرقاء ميتاليك زفاف وسفريات",
+      en: "MG Sedan Metallic Blue Wedding & Travel"
+    },
+    subtitle: {
+      ar: "سيدان عصرية بتزيين زفاف متألق وراحة تامة",
+      en: "Contemporary Sedan with Radiant Floral Styling"
+    },
+    image: "assets/cars/mg5-blue-wedding.jpg",
+    fallbackImg: "assets/cars/mg5-black-wedding.jpg",
+    passengers: "4",
+    luggage: "3",
+    tag: {
+      ar: "زفاف وسفريات",
+      en: "Wedding Sedan"
+    },
+    features: {
+      ar: ["باقة ورود متناسقة وشريط تزيين أنيق", "صالون داخلي واسع ومريح جداً", "اقتصادية ومريحة لسفريات المحافظات", "سائق محترف ومواعيد دقيقة 100%"],
+      en: ["Artistic Bouquet & Coordinated Ribbons", "Spacious & Ergonomic Interior Cabin", "Comfortable & Economical for Intercity Trips", "Punctual Professional Chauffeur"]
+    }
+  },
+  {
+    id: "mg5-black-wedding",
+    category: "sedan",
+    name: {
+      ar: "إم جي سيدان سوداء ملكية زفاف وسفريات",
+      en: "MG Sedan Black Royal Wedding & Travel"
+    },
+    subtitle: {
+      ar: "أناقة اللون الأسود الملكي مع بوكيه ورد ملون مبهج",
+      en: "Royal Black Elegance with Vibrant Floral Bouquet"
+    },
+    image: "assets/cars/mg5-black-wedding.jpg",
+    fallbackImg: "assets/cars/mg5-blue-wedding.jpg",
+    passengers: "4",
+    luggage: "3",
+    tag: {
+      ar: "أسود ملكي",
+      en: "Royal Black"
+    },
+    features: {
+      ar: ["تناغم فخم بين الأسود الملكي وألوان الورد", "مثالية لمواكب الزفاف والمناسبات الخاصة", "راحة وثبات عالي في السفر", "تكييف ثلج وصوتيات نقية"],
+      en: ["Striking Contrast of Royal Black & Fresh Flowers", "Perfect for Wedding Convoys & Special Events", "Smooth High-Speed Stability", "Chilled AC & Crisp Audio"]
+    }
+  },
+  {
+    id: "chevrolet-optra-wedding",
+    category: "sedan",
+    name: {
+      ar: "شيفروليه أوبترا زفاف وسفريات",
+      en: "Chevrolet Optra Wedding & Travel"
+    },
+    subtitle: {
+      ar: "الخيار العملي المريح للسفريات والمطارات ومواكب الزفاف",
+      en: "Practical Comfort for Travel, Airports & Weddings"
+    },
+    image: "assets/cars/chevrolet-optra-wedding.jpg",
+    fallbackImg: "assets/cars/chevrolet-optra-black.jpg",
+    passengers: "4",
+    luggage: "3",
+    tag: {
+      ar: "اقتصادي مريح",
+      en: "Smart Value"
+    },
+    features: {
+      ar: ["تزيين شيفون وورود أنيقة لحفلات الزفاف", "رحلات وسفريات اقتصادية ومريحة بين المحافظات", "شنطة أمتعة واسعة لحقائب السفر والمطار", "سائق أمين وملتزم بالمواعيد"],
+      en: ["Graceful Chiffon Drapes & Floral Wedding Art", "Affordable & Highly Reliable Intercity Travel", "Generous Trunk Space for Luggage", "Trustworthy Punctual Chauffeur"]
     }
   }
 ];
