@@ -122,6 +122,30 @@
   }
 
   /**
+   * Resolve Car Image Path across any hosting environment (local / GitHub Pages / root)
+   */
+  function resolveCarPath(path) {
+    if (!path) return '';
+    if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) {
+      return path;
+    }
+    return './' + path.replace(/^\.\//, '');
+  }
+
+  /**
+   * Resilient fallback handler for mobile image errors
+   */
+  window.handleCarImageError = function(img, fallbackSrc, carName) {
+    if (fallbackSrc && !img.dataset.triedFallback && img.src !== fallbackSrc) {
+      img.dataset.triedFallback = "true";
+      img.src = fallbackSrc;
+      return;
+    }
+    img.onerror = null;
+    img.src = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23141414'/%3E%3Ctext x='50%25' y='45%25' font-size='22' font-family='sans-serif' fill='%23D4AF37' text-anchor='middle' font-weight='bold'%3E%F0%9F%91%91 ALLORD CAR%3C/text%3E%3Ctext x='50%25' y='58%25' font-size='15' font-family='sans-serif' fill='%23E0E0E0' text-anchor='middle'%3E" + encodeURIComponent(carName) + "%3C/text%3E%3C/svg%3E";
+  };
+
+  /**
    * Fleet Rendering and Filtering
    */
   function renderFleet() {
@@ -143,15 +167,18 @@
       const reserveText = translations[currentLang].fleet.reserveBtn;
       const featuresTitle = translations[currentLang].fleet.featuresTitle;
 
+      const imgSrc = resolveCarPath(car.image);
+      const fallbackSrc = resolveCarPath(car.fallbackImg);
+
       return `
         <div class="luxury-card group flex flex-col justify-between" data-category="${car.category}">
           <!-- Vehicle Image Area -->
-          <div class="vehicle-img-wrapper h-60 w-full relative bg-black/50">
+          <div class="vehicle-img-wrapper h-60 w-full relative bg-[#141414]">
             <img 
-              src="${car.image}" 
+              src="${imgSrc}" 
               alt="${name}" 
-              loading="lazy"
-              onerror="this.onerror=null; this.src='${car.fallbackImg}';"
+              loading="eager"
+              onerror="window.handleCarImageError(this, '${fallbackSrc}', '${car.name.en}')"
               class="w-full h-full object-cover object-center"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-[#141414] via-transparent to-black/30"></div>
@@ -442,6 +469,9 @@
         navigator.serviceWorker.register('./sw.js')
           .then((reg) => {
             console.log('[ALLORD CAR PWA] Service Worker registered successfully:', reg.scope);
+            if (typeof reg.update === 'function') {
+              reg.update();
+            }
           })
           .catch((err) => {
             console.warn('[ALLORD CAR PWA] Service Worker registration failed:', err);
